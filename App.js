@@ -1,17 +1,17 @@
 
 import React from 'react';
 import {
-  SafeAreaView,
   StatusBar,
 } from 'react-native';
 import Home from './view/home'
-const App: () => Node = () => {
+import {TaskContextProvider} from './context/index'
+
+const App = () => {
 
   return (
-    <SafeAreaView>
-      <StatusBar />
-      <Home />
-    </SafeAreaView>
+      <TaskContextProvider>
+        <Home />
+      </TaskContextProvider>
   );
 }
 export default App;
